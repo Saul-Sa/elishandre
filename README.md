@@ -92,11 +92,11 @@ El sitio **destaca solo** el encuentro activo más cercano que todavía no ha pa
 
 ### WhatsApp (`data/site.ts`)
 
-Hoy los botones abren el enlace corto `https://wa.link/py66dc`. Para que el mensaje llegue **ya escrito con el nombre del kit o del encuentro**, escribe el número en `whatsapp.number`, solo dígitos y con el 57 adelante:
+Los botones abren WhatsApp al **317 402 7300** con un mensaje ya escrito que nombra el kit o el encuentro. El número está en `whatsapp.number`, solo dígitos y con el 57 adelante. Si lo dejas vacío, los botones usan el enlace corto `https://wa.link/py66dc`, que no permite mensaje prellenado.
 
 ```ts
 whatsapp: {
-  number: "573001234567",
+  number: "573174027300",
   fallbackUrl: "https://wa.link/py66dc",
 },
 ```

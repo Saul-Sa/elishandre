@@ -27,7 +27,7 @@ export const site = {
      * Con el número, los botones abren WhatsApp con un mensaje ya escrito que
      * nombra el kit o el encuentro. Si queda vacío, se usa el enlace corto.
      */
-    number: "",
+    number: "573174027300",
     /** Enlace corto de respaldo (no permite mensaje prellenado). */
     fallbackUrl: "https://wa.link/py66dc",
   },
