@@ -1,0 +1,5 @@
+# Netlify detecta Next.js automáticamente. Si el proyecto vive dentro de otro
+# repositorio, configura "Base directory" = elishandre en la interfaz de Netlify.
+[build]
+  command = "npm run build"
+  publish = ".next"

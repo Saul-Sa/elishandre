@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/*
+ * Paleta de la marca. Los tonos "deep" cumplen contraste AA para texto;
+ * los claros (gold, lavender) son decorativos.
+ */
+@theme {
+  --color-cream: #f5efe3;
+  --color-cream-deep: #ede4d3;
+  --color-sand: #ddd0b6;
+  --color-ink: #2e2a24;
+  --color-ink-soft: #5c5347;
+  --color-gold: #c2a36b;
+  --color-gold-light: #d9c49a;
+  --color-gold-deep: #7a5e28;
+  --color-olive: #6b7444;
+  --color-olive-deep: #4a5230;
+  --color-olive-night: #3a4126;
+  --color-lavender: #b7a9d6;
+  --color-lavender-light: #e9e1f2;
+  --color-lavender-deep: #6b5c93;
+
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-nunito), "Nunito Sans", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    line-height: 1.1;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Foco visible y consistente para teclado. */
+  :focus-visible {
+    outline: 2px solid var(--color-lavender-deep);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Las anclas no quedan tapadas por la barra superior. */
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+
+  ::selection {
+    background: var(--color-lavender-light);
+    color: var(--color-ink);
+  }
+}
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold-deep);
+}
+
+@utility container-page {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @media (width >= 48rem) {
+    padding-inline: 2rem;
+  }
+}
