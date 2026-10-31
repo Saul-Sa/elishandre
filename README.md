@@ -185,10 +185,8 @@ public/images/          ← imágenes reemplazables
 
 ### Despliegue
 
-El proyecto vive en la carpeta `elishandre/` de este repositorio.
-
-- **Vercel:** *Add New → Project*, elige el repositorio y en **Root Directory** escribe `elishandre`. Framework: Next.js (se detecta solo).
-- **Netlify:** *Add new site → Import an existing project*, y en **Base directory** escribe `elishandre`. `netlify.toml` ya trae el comando de build.
+- **Vercel:** *Add New → Project* y elige este repositorio. Framework: Next.js (se detecta solo).
+- **Netlify:** *Add new site → Import an existing project* y elige este repositorio. `netlify.toml` ya trae el comando de build.
 
 En ambos casos agrega la variable `NEXT_PUBLIC_SITE_URL`.
 
